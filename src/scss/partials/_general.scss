@@ -1,0 +1,96 @@
+/*  Body Default Style */
+body{
+  margin: 0;
+  padding: 0;
+  width:100%;
+  height:1024px;
+  background: $bodyBackgroundColor;
+}
+
+/* General Style Elements */
+*{
+  font-family: 'Heebo', sans-serif;
+}
+
+/*  General Style Actions  */
+.shadow-bottom{
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.shadow-around{
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.text-main-style{
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.text-main-color{
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $mainTextColor;
+}
+.main-button-style{
+  @extend .shadow-bottom;
+  border-radius: 20px;
+  background-color: #8e44ad;
+  color: #ffffff;
+  @extend .text-main-style;
+}
+.main-button-style:hover{
+  color:#ffffff;
+}
+.main-button-style:focus{
+  @extend .shadow-bottom;
+}
+
+.box{
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.btn-login{
+  width: 94px;
+  height: 40px;
+  border: 0;
+  font-size: 15px;
+
+}
+.btn-enquire{
+  width: 112px;
+  height: 40px;
+  border: 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.fill-parent{
+  width:100%;
+  height:100%;
+}
+.fill-height{
+  height:100%;
+}
+.fill-width{
+  width:100%;
+}
+
+.center-div
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-decoration: underline;
+  text-align: center;
+  height: 100px;
+}
+
+
+
+

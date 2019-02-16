@@ -1,3 +1,63 @@
-<p>
-  login works!
-</p>
+<section class="col-12 col-lg-6 offset-lg-3 pr-lg-0 pl-lg-0">
+  <div class="shadow-around box login-section">
+    <div class="container-fluid pr-0 pl-0 fill-height">
+      <div class="row fill-height">
+        <div class="col-6">
+          <img src="../../../../assets/images/rectangle-login.png" class="fill-parent" />
+        </div>
+        <div class="col-6 login-form pl-0">
+          <h1 class="welcome-back text-main-style font-weight-bold">Welcome back!</h1>
+          <p class="text-main-style font-weight-bold">Please login to access your <span>Spaces</span> Dashboard</p>
+          <div class="login-inputs">
+            <form id="loginForm" #loginForm = "ngForm" (ngSubmit) = "loginForm.form.valid && login()" novalidate>
+              <div class="form-group">
+                <label for="username" class="text-main-style control-label">Username</label>
+                <input type="text"
+                       class="form-control text-main-style"
+                       id="username"
+                       name="username"
+                       placeholder="Username..."
+                       [(ngModel)] = "formData.username"
+                       #firstname = "ngModel"
+                       [ngClass] = "{'is-invalid':loginForm.submitted && firstname.invalid}"
+                       required />
+                <span class="invalid-feedback">username field is required</span>
+              </div>
+              <div class="form-group">
+                <label for="password" class="text-main-style control-label">Password</label>
+                <input type="password"
+                       class="form-control text-main-style"
+                       id="password"
+                       name="password"
+                       placeholder="**********"
+                       [(ngModel)] = "formData.password"
+                       #password = "ngModel"
+                       [ngClass] = "{'is-invalid':loginForm.submitted && password.invalid}"
+                       required/>
+                <span class="invalid-feedback">password field is required</span>
+              </div>
+            </form>
+          </div>
+          <div>
+            <div class="container-fluid pr-0 pl-0">
+              <div class="row">
+                <a routerLink="/auth/forget-password" class="col-6 forget-password text-main-style">
+                  Forgot password?
+                </a>
+                <div class="col-3 offset-1">
+                  <button type="submit" routerLink="auth/login" form="loginForm" class="btn-submit btn btn-login main-button-style">
+                    Login
+                    <i class="fa fa-spinner fa-spin" *ngIf="loading"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <p class="alert aler-info" *ngIf="loginError"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
