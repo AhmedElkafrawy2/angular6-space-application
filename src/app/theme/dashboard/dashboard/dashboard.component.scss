@@ -1,4 +1,227 @@
-.users-list-section{
+.users-list-container{
+  // width: 1170px;
+  max-width: 1185px;
+  padding-left: 6px;
+  padding-right: 0;
   height: 567px;
   margin-top: 30px;
+  box-shadow: -2px 0 4px 0 rgba(0, 0, 0, 0.2), 2px 0 4px 0 rgba(0, 0, 0, 0.2);
+  // margin-left: 9.3%;
+}
+.users-section{
+  //width:908px;
+  //width:76.7%;
+  width:100%;
+  height:100%;
+  border-radius: 10px;
+  float: left;
+  overflow-y: auto;
+}
+.control-box{
+  width: 30px;
+  height: 30px;
+  border: 1px solid #8e44ad;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+.control-img{
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  text-align: center;
+  margin-left: 7.5px;
+}
+.user-container{
+
+  .row{
+    .header{
+      width:100%;
+      margin-top: 15px;
+      .user{
+        float: left;
+        margin-left: 30px;
+        width: 25px;
+        height: 18px;
+        font-size: 12px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #7f8c8d;
+      }
+      .action{
+        float: right;
+        margin-right:117px;
+        width: 42px;
+        height: 18px;
+        font-size: 12px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #7f8c8d;
+      }
+    }
+    .user-list:hover{
+      background-color:rgba(142, 68, 173, 0.05);
+    }
+
+    .user-list{
+      margin-top:15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      //width: 1140px;
+      height: 85px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      .user{
+        float:left;
+        margin-left: 15px;
+        .user-image{
+          float: left;
+          margin-top: 15px;
+          img{
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+          }
+        }
+        .user-name{
+          float: right;
+          margin-top: 32px;
+          margin-left: 10px;
+          width: 94px;
+          height: 22px;
+          font-family: Heebo;
+          font-size: 15px;
+          font-weight: 500;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #34495e;
+        }
+      }
+      .controls{
+        float: right;
+        margin-right: 20px;
+        width: 124px;
+        margin-top: 27px;
+        .edit{
+          float: left;
+          cursor: pointer;
+        }
+        .delete{
+          margin-left: 15px;
+          float: left;
+          cursor: pointer;
+        }
+        .show{
+          margin-top: 2px;
+          float: right;
+          cursor: pointer;
+        }
+      }
+    }
+    .separator{
+      height: 1px;
+      background-color: #dedede;
+      margin-top: 10px;
+    }
+    .load-more{
+      margin-left: 45%;
+      margin-top:20px;
+      .icon{
+        margin-left: 38px;
+        img{
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
+        }
+        i{
+          color: #8e44ad;
+        }
+      }
+      .text{
+        margin-top:10px;
+        margin-bottom: 15px;
+        width: 107px;
+        height: 18px;
+        font-family: Heebo;
+        font-size: 12px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #8e44ad;
+      }
+    }
+  }
+}
+
+/* User Profile Section */
+.user-profile{
+  width: 22.3%;
+  float: right;
+  height: 100%;
+  box-shadow: -2px 0 4px 0 rgba(0, 0, 0, 0.2), 2px 0 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: #f5f5f5;
+  border-radius: 0 10px 10px 0;
+  .close{
+    float: right;
+    margin-top:15px;
+    margin-right:15px;
+    cursor: pointer;
+    img{
+      width: 15px;
+      height: 15px;
+      object-fit: contain;
+
+    }
+  }
+  .profile-content{
+    text-align: center;
+    .image{
+      margin-top: 55px;
+      img{
+        width:125px;
+        height:125px;
+        border-radius: 50%;
+      }
+    }
+    .name{
+      margin-top: 15px;
+      font-size: 25px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #34495e;
+    }
+    .controls{
+      margin-top: 25px;
+      padding-right: 10px;
+      padding-left: 10px;
+      .edit{
+        float: left;
+        width:50%;
+        i{
+          font-size: 15px;
+        }
+      }
+      .delete{
+        float: right;
+        width:50%;
+        i{
+          color: #8e44ad;
+          font-size: 15px;
+        }
+      }
+    }
+
+  }
 }

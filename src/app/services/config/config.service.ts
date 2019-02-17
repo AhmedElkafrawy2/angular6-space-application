@@ -15,7 +15,7 @@ export class ConfigService {
     })
   };
   constructor(private http: HttpClient) { }
-  getConfig(url: string) {
+  getConfig(url: string): Observable<any> {
     return this.http.get(url);
   }
   postConfig (data, url): Observable<any> {

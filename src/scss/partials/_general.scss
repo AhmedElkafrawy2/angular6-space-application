@@ -67,6 +67,29 @@ body{
   font-weight: bold;
 }
 
+.edit-user-btn{
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: $mainButtonColor;
+  border: 0;
+  width: 90%;
+}
+.edit-user-btn:hover{
+  border:0;
+}
+.delete-user-btn{
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: #f5f5f5;
+  color: $mainButtonColor;
+  border:1px solid $mainButtonColor;
+  width: 90%;
+}
+.delete-user-btn{
+  border:0;
+}
 .fill-parent{
   width:100%;
   height:100%;
@@ -89,6 +112,9 @@ body{
   text-decoration: underline;
   text-align: center;
   height: 100px;
+}
+.pointer{
+  cursor: pointer;
 }
 
 

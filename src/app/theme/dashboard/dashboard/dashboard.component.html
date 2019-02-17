@@ -1,10 +1,88 @@
 <app-breadcrumb></app-breadcrumb>
-<section class="col-12 col-lg-10 offset-lg-1 pr-lg-0 pl-lg-0">
-  <div class="shadow-around box users-list-section">
-    <div class="container-fluid pr-0 pl-0 fill-height">
-      <div class="row fill-height">
-
+<div class="box container users-list-container">
+  <div class="user-profile" id="user-profile" [hidden]="hideSingleUser">
+    <div class="close">
+      <img (click)="hiddeSingleUser()" src="../../../../assets/images/controls/icons-8-delete-sign.png" />
+    </div>
+    <div class="clear"></div>
+    <div class="profile-content">
+      <div class="image">
+        <img [src]="singleUserAvatar" />
+      </div>
+      <div class="name">
+        {{ singleUsername }}
+      </div>
+      <div class="controls">
+        <div class="edit">
+          <button class="main-button-style edit-user-btn">
+            <i class="fas fa-pencil-alt"></i>
+            Edit
+          </button>
+        </div>
+        <div class="delete">
+          <button class="delete-user-btn">
+            <i class="fas fa-trash"></i>
+            Delete
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</section>
+  <div class="users-section" id="users-section">
+    <div class="container user-container">
+      <div class="row">
+        <div class="header">
+          <div class="user">
+            User
+          </div>
+          <div class="action">
+            Actions
+          </div>
+        </div>
+
+        <div *ngFor="let user of users; index as i; let first = first; let last = last" class="fill-width">
+
+          <div class="separator fill-width" *ngIf="!first"></div>
+          <div class="user-list fill-width">
+            <div class="user">
+              <div class="user-image">
+                <img src="{{ user.avatar}}" />
+              </div>
+              <div class="user-name">
+                {{ user.first_name+ ' ' +user.last_name}}
+              </div>
+            </div>
+            <div class="controls">
+              <div class="edit control-box">
+                <img class="control-img" src="../../../../assets/images/controls/icons-8-edit.png" />
+              </div>
+              <div class="delete control-box">
+                <img class="control-img" src="../../../../assets/images/controls/icons-8-delete.png" />
+              </div>
+              <div class="show">
+                <img (click) = "showSingleUser(user.id, user.first_name, user.last_name, user.avatar)" class="control-img" src="../../../../assets/images/controls/icons-8-right-4.png" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="load-more">
+          <div (click)="loadMoreUsers()" class="text pointer" [hidden]="loadingUsers" *ngIf="currentPage <= totalPages">
+            load more uses
+          </div>
+
+          <div class="icon" [hidden]="!loadingUsers" >
+            <i class="fa fa-spinner fa-spin"></i>
+          </div>
+
+          <div class="text" [hidden]="!loadingUsers">
+            Loading more users
+          </div>
+          <div class="text" *ngIf="currentPage > totalPages">
+            No More Users
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
